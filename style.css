@@ -108,10 +108,24 @@ section {
     max-width: 900px;
     margin: auto;
     padding: 20px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 18px;
+
+    gap: 10px;
+}
+
+.hero-content h1 {
+    margin: 8px 0;
+}
+
+.roles {
+    margin: 4px 0 10px;
+}
+
+.hero-desc {
+    margin: 0;
 }
 
 .hero-desc {
@@ -378,4 +392,218 @@ button, .btn {
         width: 150px;
         height: 150px;
     }
+}
+
+/* ===============================
+   SKILLS ICON GRID
+================================ */
+.skills-icons {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 22px;
+    justify-items: center;
+    align-items: center;
+    margin: 30px 0;
+    margin-top: 35px;
+}
+
+.skills-icons img {
+    width: 820px;
+    height: 420px;
+    object-fit: contain;
+
+    transition: 0.3s ease;
+
+    filter:
+        drop-shadow(0 0 6px rgba(0,255,255,0.25));
+
+    padding: 8px;
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.03);
+}
+
+.skills-icons img:hover {
+    transform: translateY(-6px) scale(1.08);
+
+    background: rgba(0,255,255,0.08);
+
+    box-shadow:
+        0 0 10px rgba(0,255,255,0.2),
+        0 0 25px rgba(0,255,255,0.15);
+
+    filter:
+        drop-shadow(0 0 14px rgba(0,255,255,0.5));
+}
+
+
+/* ===============================
+   HERO IMPROVEMENTS
+================================ */
+.hero {
+    min-height: 100vh;
+    padding: 80px 20px;
+    background:
+        radial-gradient(circle at top, rgba(0,255,255,0.08), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(255,0,255,0.06), transparent 30%),
+        radial-gradient(circle at center, #111, #000);
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    letter-spacing: 1px;
+}
+
+.roles {
+    color: var(--accent);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.hero-highlight {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+/* ===============================
+   CARD DEPTH
+================================ */
+.card,
+.project-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before,
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.05),
+            transparent 30%
+        );
+    pointer-events: none;
+}
+
+/* ===============================
+   PROJECT CARD ENHANCEMENTS
+================================ */
+.project-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    margin-bottom: 14px;
+}
+
+.project-card .btn-group {
+    margin-top: 18px;
+}
+
+/* ===============================
+   NAVBAR POLISH
+================================ */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+nav button {
+    margin-left: 12px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    background: var(--card);
+    color: var(--text);
+    font-size: 16px;
+}
+
+nav button:hover {
+    background: var(--accent);
+    color: black;
+}
+
+/* ===============================
+   FORM POLISH
+================================ */
+input,
+textarea {
+    font-size: 15px;
+    transition: 0.25s ease;
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: 0 0 10px rgba(0,255,255,0.15);
+}
+
+/* ===============================
+   MODAL POLISH
+================================ */
+.modal-content {
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+}
+
+#closeModal {
+    font-size: 24px;
+}
+
+/* ===============================
+   SCROLLBAR
+================================ */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0d0d0d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 10px;
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+
+    nav {
+        flex-wrap: wrap;
+        padding: 12px;
+    }
+
+    nav a {
+        margin: 6px;
+        font-size: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-desc {
+        font-size: 14px;
+    }
+
+    .skills-icons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 94%;
+    }
+
 }
