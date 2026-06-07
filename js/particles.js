@@ -1,26 +1,33 @@
-tsParticles.load("particles-js", {
-    particles: {
-        number: {
-            value: 60
-        },
+const particlesContainer =
+document.getElementById("particles-js");
 
-        color: {
-            value: "#38bdf8"
-        },
+if (particlesContainer) {
 
-        links: {
-            enable: true,
-            color: "#38bdf8",
-            distance: 150
-        },
+    tsParticles.load("particles-js", {
+        particles: {
+            number: {
+                value: 60
+            },
 
-        move: {
-            enable: true,
-            speed: 1
-        },
+            color: {
+                value: "#38bdf8"
+            },
 
-        size: {
-            value: 2
+            links: {
+                enable: true,
+                color: "#38bdf8",
+                distance: 150
+            },
+
+            move: {
+                enable: true,
+                speed: 1
+            },
+
+            size: {
+                value: 2
+            }
         }
-    }
-});
+    });
+
+}

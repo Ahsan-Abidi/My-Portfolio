@@ -5,4 +5,4 @@ import "./nav.js";
 import "./modal.js";
 import "./particles.js";
 import "./counter.js";
-import "./parallax.js";
+import "./profile3d.js";

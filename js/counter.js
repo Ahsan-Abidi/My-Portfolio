@@ -3,7 +3,7 @@ const counters = document.querySelectorAll(".stat-card h3");
 counters.forEach(counter => {
 
     const target =
-        parseInt(counter.innerText) || 100;
+        parseInt(counter.getAttribute("data-target")) || 100;
 
     let count = 0;
 
