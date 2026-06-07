@@ -1,7 +1,7 @@
 const typingEl = document.getElementById("typing");
 
 if (typingEl) {
-    const text = "Syed Mohammer Ahsan Abidi";
+    const text = "Syed Mohammed Ahsan Abidi";
     let i = 0;
 
     function type() {
