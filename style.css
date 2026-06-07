@@ -56,8 +56,10 @@ body.light {
         linear-gradient(
             to bottom right,
             var(--bg-primary),
-             var(--bg-secondary)
-    );
+            var(--bg-secondary)
+        );
+
+}
 
 body.light .header {
 
