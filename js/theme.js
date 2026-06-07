@@ -1,12 +1,17 @@
 const savedTheme = localStorage.getItem("theme");
 
-if (savedTheme) {
-    document.body.classList.add(savedTheme);
+if (savedTheme === "light") {
+    document.body.classList.add("light");
 }
 
 window.toggleTheme = function () {
+
     document.body.classList.toggle("light");
 
-    const theme = document.body.classList.contains("light") ? "light" : "dark";
-    localStorage.setItem("theme", theme);
+    localStorage.setItem(
+        "theme",
+        document.body.classList.contains("light")
+            ? "light"
+            : "dark"
+    );
 };
